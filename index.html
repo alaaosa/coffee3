@@ -3,338 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="styles.css">
-    <title>Fresh coffee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Alaa Osama</title>
 </head>
 <body>
-
-
-    <header class="main-header">
-        <div class="header-content">
-            <div class="header-img">
-                <img src="Images/manu.jpg" alt="" class="header-imag">
-            </div>
-                <h1>Alaa's coffee</h1>
+    <header>
+        <a href="#" class="logo">Alaa Osama</a>
         <nav class="navigation">
-                <a href="#Home">Home</a>
-                <a href="#manu">Manu</a>
-                <a href="#products">Products</a>
-                <a href="#about">about</a>
-                <a href="#review">review</a>
-                <a href="#contact">contacts</a>
-                <!-- <a href="#">Blogs</a> -->
+            <a href="#Skills">skills</a>
+            <a href="#contacts">contacts</a>
         </nav>
-            <div class="icons">
-                <!-- <div class="side"></div> -->
-                <i class="fa-solid fa-magnifying-glass search-head"></i>
-                <span class="fas fa-shopping-cart shopping"></span>
-            </div>
-        </div>
     </header>
 
-                                    <!--cart-side-->
-
-        <div class="side-cart">
-                <h2 class="cart-title"> your cart</h2>
-                <div class="cart-content">
-                </div>
-                <!-- total -->
-                <div class="total">
-                    <div class="total-title">total</div>
-                    <div class="total-price">$ 0</div>
-                </div>
-                <!-- Buy button -->
-                <button type="button" class="btn-buy" > Buy Now</button>
-                <!-- cart close -->
-                <i class="fa-sharp fa-solid fa-xmark" id="close-cart"></i>
+    <section class="main">
+        <div id="character">💻</div>
+        <div class="container">
+            <h2>Hello,I'm Alaa Osama <br> <span>Full Stack</span> </h2>
+            <h3>I have the ability to build a full website</h3>
+        <!-- <a href="#skills" class="main-btn"></a> -->
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
-
-
-<section class="Home" id="Home">
-    <div class="contain-Home">
-    <h2>Fresh coffee in <span> the morning </span></h2>   
-    </div>
-</section>
-
-
-    <!--           section of manu           -->
-
-    <secion class="manu" id="manu">
-        <div class="container-manu" id="manu">
-            <h2>our<span> manu </span></h2>
-            <div class="content-manu">
-                <div class="card">
-                    <img src="Images/download (1).jpeg" alt="" class="img">
-                    <h3 class="title">Sweet and creamy</h3>
-                    <div class="details"> 
-                    <span class="price">$7.5</span><del>$10.06</del>
-                    </div>
-                    <button class="addtoCart">add to cart</button>
-                </div>
-                <div class="card">
-                    <img src="Images/download (2).jpeg" alt="" class="img">
-                    <h3 class="title">Bold and aromatic</h3>
-                    <div class="details">
-                        <span class="price">$7.35</span><del>$8.02</del>
-                    </div>
-                    <button class="addtoCart" >add to cart</button>
-            
-                </div>
-                <div class="card">
-                    <img src="Images/download (3).jpeg" alt="" class="img">
-                    <h3 class="title">Warm and comforting</h3>
-                    <div class="details">
-                        <span class="price">$12.6</span><del>$20.5</del>
-                    </div>
-                    <button class="addtoCart">add to cart</button>
-            
-                </div>
-                <div class="card">
-                    <img src="Images/download.jpeg" alt="" class="img">
-                    <h3 class="title">Energizing and refreshing</h3>
-                    <div class="details">
-                        <span class="price">$5</span><del>$7.05</del>
-                    </div>
-                    <button class="addtoCart">add to cart</button>
-                </div>
-
-                <div class="card">
-                    <img src="Images/images (1).jpeg" alt="" class="img">
-                    <h3 class="title">Dark and strong</h3>
-                    <div class="details">
-                        <span class="price">$8</span><del>$12.3</del>
-                    </div>
-                    <button class="addtoCart">add to cart</button>
-                </div>
-                <div class="card">
-                    <img src="Images/manu.jpg" alt="" class="img">
-                    <h3 class="title">Rich and smooth</h3>
-                    <div class="details">
-                        <span class="price">$15</span><del>$19.03</del>
-                    </div>
-                    <button class="addtoCart">add to cart</button>
-                </div>
-            </div>
-        </div>
-    </secion>
-
-
-
-
-
-
-
-    <!--            section of products              -->
-
-
-
-
-
-
-
-    <section class="products" id="products">
-        <div class="container-products">
-            <h2>latest <span>products </span></h2>
-            <div class="content-products">
-                <div class="card-products">
-                    <div class="icons-product">
-                        <i class="fas fa-heart icon-border love"></i>
-                        <i class="fas fa-eye icon-border"></i>
-                    </div>
-
-                    <img src="Images/download (7).jpeg" alt="" class="img">
-
-                    <h3 class="title">Strong and intense</h3>
-
-
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-
-
-                    <div class="details-products">
-                        <span class="price">$15.5</span><del>$20.05</del>
-                    </div>
-                    <button class="addtoCart">add to cart</button>
-
-                </div>
-
-
-
-                <div class="card-products">
-                    <div class="icons-product">
-                        <i class="fas fa-heart icon-border love"></i>
-                        <i class="fas fa-eye icon-border"></i>
-                    </div>
-                    <img src="Images/download (6).jpeg" alt="" class="img">
-                    <h3 class="title">Frothy and creamy</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    <div class="details-products">
-                        <span class="price">$10.0</span><del>$15.05</del>
-                    </div>
-                        <button class="addtoCart">add to cart</button>
-
-                </div>
-
-
-
-
-                <div class="card-products">
-                    <div class="icons-product">
-                        <i class="fas fa-heart icon-border love"></i>
-                        <i class="fas fa-eye icon-border"></i>
-                    </div>
-                    <img src="Images/photo_5929230196857226184_m.jpg" alt="" class="img">
-                    <h3 class="title">Traditional and flavorful</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    <div class="details-products">
-                        <span class="price">$7.65</span> <del>$10.05</del>
-                    </div>
-                <button class="addtoCart">add to cart</button>
-
-
-                </div>
-
-
-
-            </div>
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-    <section class="about" id="about">
-        <div class="container-about">
-            <h2> <span>about</span> us </h2>
-            <div class="content-about">
-                <img src="Images/images (1).jpeg" alt="">
-                <div class="writing">
-            <h3>What Makes Our Coffee Special?</h3>
-            <p>
-                    Our coffee is exceptional because we source beans from the finest, ethically-managed farms, ensuring delicious and
-                    sustainable practices.
-                    We roast our beans in small batches to maintain a rich, consistent flavor.<br>
-                    Our brewing process uses state-of-the-art equipment to highlight the unique characteristics of each blend.<br>
-                    Whether it’s a bold espresso or a smooth pour-over, our coffee offers a remarkable taste experience.<br>
-                </p>
-            </div> 
-        </div>
+    <section class="cards" id="Skills">
+                <h2 class="title">Skills</h2>
+                <div class="content">
+                    <div class="Card">
+                        <div class="icon"><i class="fa-brands fa-html5"></i></div>
+                        <div class="info">
+                            <h3 class="">HTML5</h3>
+                            <P>I have used HTML5 to develop many responsive and modern user interfaces for websites and web applications. I have a deep
+                            understanding of page structure and layout using semantic elements  
+                            </P>
+                        </div>
+                    </div>
+                    <div class="Card">
+                        <div class="icon"><i class="fa-brands fa-css3"></i></div>
+                        <div class="info">
+                            <h3 class="">CSS3</h3>
+                            <P> My skills include
+                            crafting layouts using Flexbox and Grid, styling elements with precision, and ensuring compatibility across various
+                            browsers. I am proficient in using CSS pre-processors like SASS to write cleaner and more maintainable code
+                            </P>
+                        </div>
+                        </div>
+                    <div class="Card">
+                        <div class="icon"><i class="fa-brands fa-php"></i></div>
+                        <div class="info">
+                            <h3 class="">PHP</h3>
+                            <P>My expertise includes building secure back-end systems, integrating with databases using MySQL, and working with various
+                            PHP frameworks such as Laravel and CodeIgniter. I am skilled in writing clean, modular code that follows best practices
+                            </P>
+                        </div>
     </section>
 
-<section class="review" id="review">
-    <div class="container-review">
-        <h2>Customer's <span>review</span></h2>
-        <div class="content-review">
-            <div class="card-review">
-            <i class="fa-solid fa-hashtag face"></i>
-            <p>I recently tried this coffee, and I have to say, it exceeded my expectations! The rich aroma and smooth taste make every
-            cup a delightful experience.Whether you're starting your day or need an afternoon pick-me-up, this coffee hits the spot. The packaging is also
-            great, keeping the coffee fresh for longer. Highly recommend to any coffee lover!</p>
-            <i class="fa-solid fa-user photo-person"></i>
-            <h3>R.Mohamed</h3>
-        <div class="rating-review">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+    <section class="cards contact" id="contacts">
+        <h2 class="title">let's work together</h2>
+        <div class="content contacts">
+            <div class="Card contact">
+                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="info">
+                    <h3 class="">Phone</h3>
+                    <P> +201026984628
+                    </P>
+                </div>
             </div>
-        </div>
-            <div class="card-review">
-            <i class="fa-solid fa-hashtag face"></i>
-            <p>I recently tried this coffee, and I have to say, it exceeded my expectations! The rich aroma and smooth taste make every
-            cup a delightful experience.Whether you're starting your day or need an afternoon pick-me-up, this coffee hits the spot. The packaging is also
-            great, keeping the coffee fresh for longer. Highly recommend to any coffee lover!</p>
-            <i class="fa-solid fa-user photo-person "></i>
-            <h3>Alaa osama</h3>
-        <div class="rating-review">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-        </div>
-        </div>
-            <div class="card-review">
-            <i class="fa-solid fa-hashtag face"></i>
-            <p>I recently tried this coffee, and I have to say, it exceeded my expectations! The rich aroma and smooth taste make every
-            cup a delightful experience.Whether you're starting your day or need an afternoon pick-me-up, this coffee hits the spot. The packaging is also
-            great, keeping the coffee fresh for longer. Highly recommend to any coffee lover!</p>
-            <i class="fa-solid fa-user photo-person"></i>
-            <h3>Alaa osama</h3>
-
-        <div class="rating-review">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-        </div>
-        </div>
-    </div>
-    </div>
-</section>
-
-
-        <!-- <section class="contact-section" id="contact">
-        <h2>Contact <span>Us</span></h2>
-    
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Our Office</h3>
-                <p>123 Coffee Street<br>Cairo,Egypt</p>
-                <p><strong>Phone:</strong> +00201026984628</p>
-                <p><strong>Email:</strong> alaaosama.com</p>
-            </div>
-    
-            <div class="contact-form">
-                <h3>Send Us a Message</h3>
-                <form action="#" method="post">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    
-        <div class="map-container">
-            <h3>Our Location</h3>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345092097!2d144.95373531568074!3d-37.81627974202169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d5d5284e1a0!2sGoogle!5e0!3m2!1sen!2sus!4v1617163590931!5m2!1sen!2sus"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
-        </div>
-    </section>  -->
-<script src="JS/jquery-3.7.1.js"></script>
-<script src="JS/script.js"></script> 
-<script src="JS/main.js"></script>
+            <div class="Card">
+                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="info">
+                    <h3 class="">Email</h3>
+                    <P> alaaosama27288@gmail.com </P>
+                </div>
+                </div>
+    </section>
+    <script src="main.js"></script>
 </body>
-</html> 
+</html>
