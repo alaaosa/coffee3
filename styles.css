@@ -1,0 +1,1030 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.main-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color:rgb(17, 16, 16);
+    z-index:1000;
+    border-bottom:black solid 2em;
+}
+
+.header-content{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:1em
+}
+
+.header-img img{
+    width:6em;
+    height:auto;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.header-content h1{
+    margin: 0;
+    font-size: 1.5em;
+    color: #555;
+}
+
+.navigation{
+    display: flex;
+    gap:20px;
+}
+
+.navigation a{
+    color: azure;
+    text-decoration: none;
+    padding:.5em 1em;
+    background-color: #444;
+    border-radius: 5px;
+    position: relative;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    /* سمك الخط */
+    background-color: rgb(239, 236, 236);
+    /* لون الخط */
+    left: 0;
+    bottom: -.5px;
+    /* لضبط المسافة بين الخط والنص */
+    transition: width 0.3s ease;
+    /* لجعل الخط يتحرك من اليسار لليمين بسلاسة */
+}
+
+.navigation a:hover::after {
+    width: 100%;
+    /* جعل الخط يملأ عرض النص عند التمرير */
+}
+.header-content .icons{
+    margin:2em;
+}
+.header-content .icons i,.header-content .icons span{
+    color: white;
+    margin: 0 1em;
+}
+
+.search-head, .shopping{
+    cursor: pointer;
+}
+
+ 
+
+
+.Home{
+    display: flex;
+    margin-top: 6em;
+    padding: 2em 0;
+}
+
+.contain-Home{
+    background-image: url(Images/background2.jpg);
+    background-attachment:scroll;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.contain-Home h2{
+    display: flex;
+    /* margin-top: 1em; */
+    padding: 1em ;
+    color: #a29f9f;
+    font-size: 4em;
+    display: block;
+    font-weight: 800;
+}
+
+.contain-Home span{
+    display: block;
+}
+
+.content-manu{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,auto);
+    top:8em;
+    margin:5%;
+}
+
+.card{
+    display: flex;
+    height: 50vh;
+    max-width:450px;
+    border: .001em dotted white;
+    position: relative;
+    justify-content: center;
+    align-items: center;  
+    border-radius: 25px;
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    background-color: white;
+    transform: scale(1.03)
+}
+
+.container-manu h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 .5em;
+}
+
+.container-manu h2 span {
+    color: rgb(233, 188, 130);
+    /* display: inline-block; */
+    margin-left: 12px;
+}
+
+.card span,
+.card p,
+.card del,
+.container-manu h2
+    { color: aliceblue;
+}
+
+.card h3 , .card-products h3{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    width: 100%;
+}
+.details{
+    position:absolute;
+    display: flex;
+    bottom:34%;
+}
+.details span{
+    font-size: 1.5em;
+    font-weight: 400;
+    padding-right: 27px;
+}
+
+.details del{
+    font-size: 1.1;
+    font-weight: 150;
+    position: absolute;
+    /* display: inline-block; */
+    bottom:5px;
+    right:-25px
+}
+
+.card img{
+    width:9em;
+    height:30%;
+    margin-top:1em;
+    position: absolute;
+    top: 1em;
+}
+
+.card:hover span,
+.card:hover del,
+.card:hover p,
+.card:hover h3 {
+    color: #000;
+}
+
+.addtoCart{
+    position: absolute;
+    bottom:20%;
+    background-color: rgb(227, 189, 139);
+    padding: .5em 1em;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+
+.container-products h2 ,.container-about h2 {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 600;
+    
+}
+
+.container-products h2 span,.container-about h2 span{
+    margin-left: 15px;
+    color: rgb(233, 188, 130);
+}
+
+.content-products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 70vh;
+    max-height:90vh ;
+    margin:5% ;
+}
+
+.card-products{
+    border: 1px dotted white;
+    position: relative;
+    transition: 0.7s ease;
+    border-radius: 15px ;
+    margin: 2px;
+
+    /* max-height: 100vh; */
+}
+
+.card-products:hover{
+    transform: scale(1.03);
+    background-color: rgb(71, 66, 58);
+}
+
+.icons-product{
+    color: aliceblue;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top:4%;
+    width: 100%;
+    left:6%
+}
+
+.icons-product i{
+    padding:.5em .5em;
+    cursor: pointer;
+}
+
+.icons-product i:hover {
+    background-color: rgb(100, 100, 99);
+    color: #000;
+
+}
+
+.icon-border{
+    font-size: 24px;
+    color:white;
+    border: 2px solid #333;
+    padding: 2em;
+    border-radius: 50%;
+    margin-right:10%;
+}
+
+.card-products .addtoCart{
+    position: absolute;
+    left:28%;
+        bottom:4%;
+        background-color: rgb(227, 189, 139);
+        padding: .5em 2em;
+        text-transform: capitalize;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1em;
+}
+.cart-shopping:hover{
+    background-color:rgba(56, 61, 39, 0.263);
+}
+
+.card-products .img{
+    display: flex;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    margin:9% 32%;
+    width:35%;
+    max-width: 65%;
+    background-color: #000;
+
+}
+
+
+    .side-cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: #454444;
+    box-shadow: -2px 0 4px hsl(0 4% 15% /10%);
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+
+
+.side-cart.active {
+    right: 0;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+
+}
+
+.cart-box {
+    display: grid !important;
+    grid-template-columns: 32% 50% 18% !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.cart-box img {
+    width: 75%;
+    height: 100%;
+
+}
+
+.cart-price {
+    font-weight: 500;
+}
+
+.cart-quantity {
+    border: 1px solid white;
+    outline-color: red;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cart-remove {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-price {
+    margin-left: 0.5rem;
+}
+
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: rgb(217, 14, 14);
+    cursor: pointer;
+}
+
+.btn-buy{
+    display: flex;
+        margin: 1.5rem auto 0 auto;
+        padding: 12px 20px;
+        border: none;
+        background: rgb(67, 116, 148);
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        border-radius: 10%;
+}
+.btn-buy:hover{
+    background-color: brown;
+}
+
+
+.rating{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(235, 200, 153);
+    padding: 0.5em 1em;
+}
+
+
+.details-products{
+    color: aliceblue;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    right: 2em;
+
+
+}
+
+
+.details-products span {
+    font-size: 1.4em;
+    font-weight: 400;
+
+    /* padding-right: 22p; */
+}
+
+.card-products .details-products del {
+    font-size: 0.9em;
+    /* يجب أن يكون مع وحدة em */
+    font-weight: 400;
+    display: flex;
+    /* يجب أن يكون مع قيمة مناسبة (400) */
+    display: flex;
+    position:absolute;
+    bottom:.1em;
+    right:33%;
+    color: aliceblue;
+}
+ 
+.content-about{
+    margin: 5%;
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items:flex-start;
+    gap: 20px;
+}
+
+.container-about h2 span{
+    margin:0 15px 0 0;
+}
+
+.content-about img{
+    max-width: 550px;
+    width: 50%;
+    height: auto;
+}
+
+.writing{
+    width: 100%;
+    max-width: 550px;
+    position: inherit;
+    margin: 3em 0 0 0;
+    letter-spacing: 0.07em;
+    color: rgb(145, 141, 141);
+    }
+
+.writing h3{
+    font-size: 1.3;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: white;
+}
+
+
+.content-review{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    margin: 5%;
+    /* gap:1em; */
+    /* height: 100vh; */
+}
+
+.card-review{
+    border:1px solid white;
+    height: 100vh;
+    width: 95%;
+}
+
+.card-review .face{
+    color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: .5em;
+    font-size: 10em;
+    font-weight:1200;
+}
+
+.card-review p {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0em;
+    margin: 5em;
+}
+
+.photo-person{
+    color: #007bff;
+        display: flex;
+        justify-content: center;
+        font-size: 5em;
+        font-weight: 600;
+        position: relative;
+        bottom:.9em
+
+
+
+}
+
+.card-review h3{
+        color: #007bff;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            position: relative;
+            bottom: 3em;
+}
+
+.rating-review{
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2em;
+}
+
+
+
+.contact-section {
+    background-color:#585656;
+    margin:0 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color:white;
+}
+
+.contact-section h2 span{
+    color: rgb(233, 171, 90);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    max-width: 40%;
+    color: #fff;
+    border:.5px dotted white;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%;
+    background-color: rgba(117, 116, 114, 0.719);
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.map-container {
+    text-align: center;
+}
+
+.map-container h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.container-review h2{
+    color: azure;
+    display: flex;
+    position: r;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    text-transform: uppercase;
+}
+
+.container-review h2 span{
+    color: bisque;
+    margin-left: 15px;
+}
+
+
+@media (max-width:1080px){
+    body,html{
+        overflow-x:hidden;
+        line-height: 1.4;
+    }
+    header{
+        max-width: 1080px;
+        width: 100%;
+    }
+    .icons{
+        display: flex;
+    }
+    .content-products{
+    margin: 0 5% 10% ;
+    }
+.card-products{
+    width:100%;
+    height:80vh ;
+}
+
+.card-products   .addtoCart{
+        position: absolute;
+        left: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+.details-products span {
+    font-size: 1.8em;
+    padding-right: 30px;
+}
+
+.card-products .details-products del {
+    font-size: .9em;
+    font-weight: 300;
+    bottom: 5px;
+    right: 25%;
+} 
+
+.content-review{
+    margin: 0 5% 8em;
+    padding-top: 1em;
+}
+.card-review .face{
+    font-size: 3em;
+    font-weight: 800;
+
+}
+.card-review{
+    height: 150vh;
+}
+}
+
+@media (max-width:400px){
+    header{
+        font-size: 1em;
+        padding: 4px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .contain-Home h2{
+        font-size: 2.2em;
+        font-weight: 800;
+    }
+
+    .contain-Home span{
+        font-size: 1.2;
+        font-weight: 600;
+    }
+    .contain-Home {
+        background-position:50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 25em;
+    }
+/* 
+    .card img{
+        width: 100%;
+        padding: 0 2px;
+    }
+
+    .card h3{
+        font-size: .9em;
+        font-weight: 400;
+        display: flex;
+        position: absolute;
+        top:11.1em;
+        left:15%;
+        width: 3em;
+        padding-left: 2px;
+    }
+
+    .details span , .details del{
+        position:absolute;
+        bottom: -3rem;
+    }
+
+        .details span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-size: 1.1em;
+            font-weight: 400;
+        }
+
+        .details del{
+            position: relative;
+            right: 23px;
+            bottom: -3.3rem;
+            font-size: .8em;
+            font-weight: 200;
+        }
+
+    .card .addtoCart{
+        position: absolute;
+        height: 15px;
+        bottom: 1rem;
+        font-size: .9em;
+        font-weight: 300;
+        padding: 1em .5em ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-products h2,.container-manu h2,.container-about h2{
+        font-size: 1.3em;
+        font-weight: 400;
+    }
+
+    .card-products{
+        width:119px;
+        height: 63vh;
+        margin: 0;
+    }
+
+    .icons-product i{
+        font-size: 0.8em;
+        font-weight: 400;
+    }
+
+    .card-products .img{
+        width: 180px;
+        height: 120px;
+        margin: 1.5em 1.2em  ;
+    }
+
+    .card-products h3{
+        font-size: .9em;
+        font-weight: 400;
+        padding-left: 1em;
+    }
+
+    .card-products .addtoCart{
+        height: 30px;
+        font-size: .9em;
+        font-weight: 400;
+        width:112px;
+        display: flex;
+        position: absolute;
+        left: 2px;
+        bottom: 1em;
+    }
+
+    .details-products {
+        position: relative;
+        right:5px;
+    }
+    .details-products span{
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+    .details-products del{
+        font-size:.2em ;
+        font-weight: 100;
+        padding-left: 10px;
+        position: absolute;
+        left:4em;
+        top: 7px;
+    } */
+
+    .content-manu{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .card{
+        width: 90%;
+        /* background-color: #444242; */
+        border: 2px white dotted;
+        border-radius: 25px;
+        max-height: 50vh;
+        position: relative;
+    }
+
+                .content-products {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 15px;
+                    width: 100%;
+                    padding: 10px;
+                    height: 150vh;
+                }
+        
+                .card-products {
+                    width: 90%;
+                    border: 2px white dotted;
+                    border-radius: 25px;
+                    max-height: 75vh;
+                    position: relative;
+                }
+
+    .about{
+        position: relative;
+        top:140vh;
+        height: 100vh;
+        margin:30% 5em
+    }
+    .content-about{
+        position: relative;
+    }
+
+    .content-about img{
+        width: 100%;
+    }
+
+    .review{
+        position: relative;
+        top:100vh
+    }
+
+    .writing{
+        display: flex;
+        position: absolute;
+        top:8em;
+        right:5em;
+        /* width: 100%; */
+        max-width: 390px;
+        margin-bottom: 4em;
+    }
+
+    .writing h3{
+        width: 100%;
+        white-space: nowrap;
+
+    }
+.writing  p  {
+    position:inherit;
+    top: 2.8em;
+    width: 355px;
+    font-size: .7em;
+    font-weight: 500;
+}
+
+.review{
+    position: relative;
+    bottom:1em;
+    height: 130vh;
+}
+
+.content-review{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:15px;
+    width: 100%;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.card-review{
+    width: 90%;
+    background-color: #444242;
+    border: 2px white dotted  ;
+    border-radius: 25px;
+    max-height:50vh;
+    position: relative;
+}
+
+.card-review p{
+    height: 4em;
+    overflow-y:scroll ;
+    position: absolute;
+    top:.5em
+}
+
+.card-review .photo-person{ 
+    font-size: 1.9em;
+    font-weight: 500;
+    position: absolute;
+    bottom: 2.5em;
+    left:5em
+
+}
+
+.card-review .rating-review{
+    font-size: 1.1em;
+        font-weight: 500;
+        position: absolute;
+        bottom: 1.1em;
+        left: 7em
+}
+
+.card-review h3{
+        font-size: 1em;
+            font-weight: 500;
+            position: absolute;
+            bottom: 2.5em;
+            left: 7.5em
+}
+
+.face{
+    font-size: .9em;
+    font-weight: 400;
+}
+}
+
+@media (max-width:360){
+.content-manu {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .card {
+        width: 90%;
+        border: 2px white dotted;
+        border-radius: 25px;
+        max-height: 50vh;
+        position: relative;
+    }
+
+    .content-products{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+        padding: 10px;
+    }
+.card-products{
+    width: 90%;
+        border: 2px white dotted;
+        border-radius: 25px;
+        max-height: 50vh;
+        position: relative;
+}
+}
